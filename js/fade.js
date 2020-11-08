@@ -7,6 +7,7 @@ let popupClose = document.getElementById('popup_close_btn');
 function popupDismiss() {
     cvPopup.style.opacity = '0';
     cvPopup.style.zIndex = '-1';
+    popupClose.style.display = 'none';
 }
 
 popupClose.addEventListener('click', popupDismiss);
