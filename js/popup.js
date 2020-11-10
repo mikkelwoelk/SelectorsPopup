@@ -41,7 +41,7 @@ var ctaPopup = {
 
 			setTimeout(function() {
 					popupEl.classList.add('ctaPopup--fade-in');
-			}, 50);
+			}, 250);
 	},
 
 	hide: function() {
@@ -51,7 +51,7 @@ var ctaPopup = {
 			setTimeout(function() {
 					popupEl.classList.remove('ctaPopup--show', 'ctaPopup--fade-in', 'ctaPopup--fade-out');
 					popupEl.classList.add('ctaPopup--hidden');
-			}, 50);
+			}, 250);
 	},
 
 	// Hide the pop-up and save a cookie that we can check for next time the page loads
