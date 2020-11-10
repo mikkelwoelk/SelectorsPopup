@@ -19,6 +19,7 @@
     padding: 0 50px;
     opacity: 0;
     transition: opacity .5s;
+    z-index: 9999;
 }
 
 .ctaPopup--hidden{
@@ -86,6 +87,7 @@
 
 .ctaPopup_inner_info_btn:hover{
     opacity: 0.7;
+    color: #ffffff;
 }
 
 .ctaPopup_inner_info_gdpr{
