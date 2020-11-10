@@ -16,10 +16,10 @@
     border-top: 4px solid #f19d46;
     position: fixed;
     bottom: 0;
-    padding: 0 50px;
     opacity: 0;
-    transition: opacity .5s;
+    transition: all .5s;
     z-index: 9999;
+    transform: translateY(20px);
 }
 
 .ctaPopup--hidden{
@@ -29,6 +29,8 @@
 .ctaPopup--show{
     display: block;
     opacity: 0;
+    transform: translateY(0);
+    transition-delay: 2s;
 }
 
 .ctaPopup--fade-in{
@@ -43,6 +45,7 @@
     position: relative;
     max-width: 1170px;
     margin: 0 auto;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -52,7 +55,7 @@
     position: relative;
     width: 35%;
     height: auto;
-    transform: translateY(-15%);
+    transform: translateY(-20%);
 }
 
 .ctaPopup_inner_info{
@@ -99,8 +102,8 @@
     position: absolute;
     background-color: transparent;
     outline: none;
-    top: 10px;
-    right: 15px;
+    top: 7px;
+    right: 7px;
     width: 40px;
     height: 40px;
     border: none;
@@ -131,18 +134,12 @@
 }
 
 @media screen and (max-width: 992px){
-    .ctaPopup{
-        padding: 0 0px 20px 15px;
-    }
     .ctaPopup_inner{
         max-width: 970px;
     }
 }
 
 @media screen and (max-width: 768px){
-    .ctaPopup{
-        padding: 0 50px 20px 15px;
-    }
     .ctaPopup_inner{
         max-width: 750px;
     }
@@ -165,15 +162,9 @@
     .ctaPopup_inner_info_gdpr{
         font-size: 11px;
     }
-    .ctaPopup_close_btn{
-        right: -40px;
-    }
 }
 
 @media screen and (max-width: 600px){
-    .ctaPopup{
-        padding: 0 15px 20px;
-    }
     .ctaPopup_inner{
         max-width: 750px;
         flex-direction: column;
@@ -181,16 +172,13 @@
     .ctaPopup_inner_img{
         width: 50%;
         height: 20px;
-        transform: translateY(-160px);
+        transform: translateY(-180px);
     }
     .ctaPopup_inner_info{
         width: 100%;
     }
     .ctaPopup_inner_info_text{
         max-width: 92%;
-    }
-    .ctaPopup_close_btn{
-        right: -5px;
     }
 }
 
@@ -201,7 +189,7 @@
     .ctaPopup_inner_img{
         width: 80%;
         height: 20px;
-        transform: translateY(-170px);
+        transform: translateY(-190px);
     }
     .ctaPopup_inner_info_header{
         font-size: 25px;
@@ -215,5 +203,17 @@
     }
     .ctaPopup_inner_info_gdpr{
         font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .ctaPopup_inner_img{
+        transform: translateY(-140px);
+    }
+    .ctaPopup_inner_info_header{
+        font-size: 22px;
+    }
+    .ctaPopup_inner_info_text, .ctaPopup_inner_info_btn{
+        font-size: 13px;
     }
 }
