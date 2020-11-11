@@ -59,7 +59,7 @@ var ctaPopup = {
 			this.hide();
 
 			var d = new Date;
-			var days = 360;
+			var days = 15;
 			d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
 			document.cookie = this.cookieName + "=" + true + ";path=/;expires=" + d.toGMTString();
 	}
